@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div style="width: 200px;height: 40px;border: 1px solid red;">
+    <div style="max-width: 100%;display: flex">
+        哈哈
+        <div style="max-width: 100%;white-space: nowrap">打发打发打发打发大赛放大放大撒发打发打发打发打发打发的放大</div>
+    </div>
+</div>
+<script>
+    /* // 一
+    class Person{
+      constructor() {
+        this.name = '';
+        this.init('橙某人');
+      }
+      init(name) {
+        const updateName = name => {
+          this.name = name;
+        };
+        updateName(name);
+      }
+    }
+    console.log(new Person().name); */
+
+    /* // 二
+    class Person{
+      constructor() {
+        this.name = '';
+        this.init('橙某人');
+      }
+      init(name) {
+        const _this = this;
+
+        updateName(name);
+
+        function updateName(name) {
+          _this.name = name;
+        }
+      }
+    }
+    console.log(new Person().name); */
+
+    /* // 三
+    class Person{
+      constructor() {
+        this.name = '';
+        this.init('橙某人');
+      }
+      init(name) {
+        updateName.call(this, name);
+        function updateName(name) {
+          this.name = name;
+        }
+      }
+    }
+    console.log(new Person().name); */
+
+    /* // 四
+    class Person{
+      constructor() {
+        this.name = '';
+        this.init('橙某人');
+      }
+      init(name) {
+        (name => {
+          this.name = name;
+        })(name)
+      }
+    }
+    console.log(new Person().name); */
+
+    // 五
+    class Person{
+      constructor() {
+        this.name = '';
+        this.init('橙某人');
+      }
+      init(name) {
+        this.updateName(name)
+      }
+      updateName(name) {
+        this.name = name;
+      }
+    }
+    console.log(new Person().name);
+</script>
+</body>
+</html>

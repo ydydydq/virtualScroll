@@ -127,11 +127,9 @@ export default class VirtualScroll {
       this.$listInner.style.transform = `translateY(-${offsetToEdge}px)`
       return
     }
-    console.log("重新渲染")
 
     const headIndexWithCache = Math.max(headIndex - this.cacheCount, 0)
     const tailIndexWithCache = Math.min(tailIndex + this.cacheCount, this._list.length)
-
     this.renderListWithCache = this._list.slice(headIndexWithCache, tailIndexWithCache)
     this.offsetToEdge = offset - sumHeight(this._list, 0, headIndexWithCache)
 

@@ -59,7 +59,13 @@
     for (let i = 0; i < 100; i++) {
       data.push(i)
     }
-    window.Scroller = new VirtualScroll($el, data,);
+    window.Scroller = new VirtualScroll($el, data, (item) => {
+      const $item = document.createElement("div")
+      $item.classList.add("item")
+      $item.innerHTML = item.original
+
+      return $item
+    });
 </script>
 </body>
 </html>
